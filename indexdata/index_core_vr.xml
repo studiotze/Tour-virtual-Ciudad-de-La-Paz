@@ -663,15 +663,6 @@ stopautorotation();
 		depth="1000"
 		/>
 
-
-	<layer name="vr_rotate_device_required" keep="true" devices="mobile" vr="true" 
-		url="%FIRSTXML%/graphics/rotate_device.png" width="80%" height="prop"
-		align="center" edge="center"
-		autoalpha="true" alpha="0.0"
-		enabled="false"
-		/>
-
-
 	<action name="vr_auto_click">
 		if(webvr.isenabled,
 			if(%1 != null, set(vr_aclk_timeout, %1), set(vr_aclk_timeout, 2000));
@@ -780,7 +771,7 @@ stopautorotation();
 		set(layer[webvr_enterbutton].visible,true);
 		tween(layer[webvr_exitbutton].alpha,0);
 		tween(layer[webvr_setupbutton].alpha,0);
-		tween(layer[vr_rotate_device_required].alpha, 0.0, 0.0);
+		tween(layer[vr_device_required].alpha, 0.0, 0.0);
 
 
 		js(accessStdVr());
